@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" rel="stylesheet">
+    <title>QUIZ APP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+</head>
+
+<body class="box-border ">
+
+
+
+    <!-- Navbar Start  -->
+
+    <!-- component -->
+    <!-- I've set max-w-screen-md, you may need to change it -->
+    <nav class=" bg-white shadow   z-10 mx-auto inset-x-0 top-0 flex justify-between items-center">
+
+        <a href="#" class="font-extrabold m-3 uppercase inline-flex hover:text-pink-700 transition-all duration-500">
+            <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path fill="#fff" d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path fill="#fff"
+                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+            </svg>
+            QUIZ APP
+        </a>
+
+        <button id="mobileMenuButton" class="p-3 focus:outline-none md:hidden" title="Open side menu">
+            <!-- SVG For "x" button -->
+            <svg id="mobileMenuButtonClose" class="w-6 h-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            <!-- SVG For "Menu burger" button -->
+            <svg id="mobileMenuButtonOpen" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <!-- List of nav item -->
+        <div id="sideMenuHideOnMobile" class="bg-white font-semibold z-10 rounded-bl-md flex absolute top-0 right-0 transition-all duration-500 transform translate-x-0
+                                          w-1/2 md:w-auto
+                                          px-3 md:px-0
+                                          flex-col md:flex-row
+                                          -translate-y-full md:translate-y-0
+                                          md:mt-1 md:items-center md:mx-1 md:uppercase">
+            <a href="#"
+                class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0">Project</a>
+            <a href="#"
+                class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0">Resource</a>
+            <a href="#"
+                class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0">About</a>
+        </div>
+
+    </nav>
+
+    <script>
+        var mobileMenuButton = document.getElementById("mobileMenuButton");
+        mobileMenuButton.onclick = function () {
+            document.getElementById("sideMenuHideOnMobile").classList.toggle("-translate-y-full");
+            document.getElementById("sideMenuHideOnMobile").classList.toggle("mt-12");
+            document.getElementById("sideMenuHideOnMobile").classList.toggle("shadow");
+            document.getElementById("mobileMenuButtonClose").classList.toggle("hidden");
+            document.getElementById("mobileMenuButtonOpen").classList.toggle("hidden");
+        }
+        // Hide element when click outside nav
+        var theElementContainer = document.getElementsByTagName("nav")[0];
+        document.addEventListener('click', function (event) {
+            if (!theElementContainer.contains(event.target)) {
+                document.getElementById("sideMenuHideOnMobile").classList.add("-translate-y-full");
+                document.getElementById("sideMenuHideOnMobile").classList.remove("mt-12");
+                document.getElementById("sideMenuHideOnMobile").classList.remove("shadow");
+                document.getElementById("mobileMenuButtonOpen").classList.remove("hidden");
+                document.getElementById("mobileMenuButtonClose").classList.add("hidden");
+            }
+        });
+    </script>
+
+    <!-- Navbar Ends  -->
+
+
+
+
+    <!-- Start Btn  -->
+
+    <div id="btn" class="  absolute top-[50%] left-[50%] translate-x-[-50%]">
+
+        <a href="#_" class="relative inline-block text-lg group">
+            <span
+                class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+                <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
+                <span
+                    class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+                <span class="text-xl relative">Start The Quiz</span>
+            </span>
+            <span
+                class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+                data-rounded="rounded-lg"></span>
+        </a>
+
+    </div>
+
+    <!-- Start Btn  -->
+
+
+
+
+    <!-- Main Content  -->
+
+
+
+    <div id="main"
+        class="hidden mx-auto  flex-col h-screen  justify-center  rounded-2xl max-w-screen-md  container space-y-4 aspect-square  ">
+
+        <div
+            class="flex flex-col w-auto mx-4  md:mx-auto px-14  py-8 rounded-lg  justify-center space-y-4 border-2 box-border ">
+
+
+            <h3 id="question" class="text-3xl font-semibold text-center">Loading... </h3>
+            <div class="h-0.5 w-full bg-black "></div>
+
+            <div class=" text-center flex justify-center space-x-14 m-8">
+                <!-- component -->
+
+                <div class="option-div">
+
+
+                </div>
+
+                <div class="option-div">
+
+
+                </div>
+
+            </div>
+
+            <div class=" text-center flex justify-center space-x-14 m-8">
+                <div class="option-div">
+                </div>
+
+                <div class="option-div">
+                </div>
+            </div>
+
+
+
+            <div class=" text-center flex justify-center space-x-14 m-8">
+                <div class="option-div">
+                </div>
+
+                <div class="option-div">
+                </div>
+            </div>
+
+
+            <!-- Result Div  -->
+            <div class="result hidden cursor-pointer text-center relative px-6 py-3 font-bold text-black group">
+                <span
+                    class="text-center absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-red-300 group-hover:translate-x-0 group-hover:translate-y-0"></span>
+                <span class="absolute inset-0 w-full h-full border-4 border-black"></span>
+                <span class="resultHere text-center text-2xl relative"></span>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <!-- Main Content  -->
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
