@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="box-border font-[Poppins] ">
+<body class="box-border font-[Poppins]  ">
 
 
 
@@ -48,18 +48,47 @@
         </button>
 
         <!-- List of nav item -->
-        <div id="sideMenuHideOnMobile" class="bg-white font-semibold z-10 rounded-bl-md flex absolute top-0 right-0 transition-all duration-500 transform translate-x-0
-                                          w-1/2 md:w-auto
-                                          px-3 md:px-0
-                                          flex-col md:flex-row
-                                          -translate-y-full md:translate-y-0
-                                          md:mt-1 md:items-center md:mx-1 md:uppercase">
-            <a href="#"
-                class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0">Project</a>
-            <a href="#"
-                class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0">Resource</a>
-            <a href="#"
-                class="mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0">About</a>
+        <div id="sideMenuHideOnMobile"
+            class="bg-white font-semibold z-10 rounded-bl-md flex absolute top-0 right-0 transition-all duration-500 transform translate-x-0 cursor-pointer w-1/3 md:w-auto px-3 md:px-0 flex-col md:flex-row  -translate-y-full md:translate-y-0 md:mt-1 md:items-center md:mx-1 md:uppercase">
+
+            <div
+                class="random mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0">
+                Random</div>
+            <div
+                class="tag mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0">
+                HTML</div>
+            <div
+                class="tag mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0">
+                Linux</div>
+            <div
+                class="tag mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0">
+                DevOps</div>
+
+
+
+            <div
+                class="tag mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0">
+                Docker</div>
+
+
+            <div
+                class="tag mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0">
+                Kubernetes</div>
+
+            <div
+                class="tag mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0">
+                Wordpress</div>
+
+
+            <div
+                class="tag mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0">
+                BASH</div>
+
+
+
+
+
+
         </div>
 
     </nav>
@@ -93,9 +122,9 @@
 
     <!-- Start Btn  -->
 
-    <div id="btn" class="  absolute top-[50%] left-[50%] translate-x-[-50%]">
+    <div id="btn" class="  absolute top-[50%] left-[50%] translate-x-[-50%] ">
 
-        <a href="#_" class="relative inline-block text-lg group">
+        <div class="relative inline-block text-lg group cursor-pointer">
             <span
                 class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
                 <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
@@ -106,7 +135,7 @@
             <span
                 class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
                 data-rounded="rounded-lg"></span>
-        </a>
+        </div>
 
     </div>
 
@@ -120,19 +149,22 @@
 
 
     <div id="main"
-        class="hidden mx-auto  flex-col h-screen  justify-center  rounded-2xl max-w-screen-md  container space-y-4 aspect-square  ">
+        class="hidden  mx-auto my-14 flex-col   justify-center  rounded-2xl max-w-screen-md  container space-y-4 aspect-square  ">
 
         <div
-            class="lightthisup flex flex-col w-auto mx-4  md:mx-auto px-14  py-8 rounded-lg  justify-center space-y-4 border-2 box-border ">
+            class="lightthisup relative flex flex-col w-auto mx-4  md:mx-auto px-14  py-8 rounded-lg  justify-center space-y-4 border-2 box-border ">
 
+
+            <span id="tag"
+                class="absolute top-[0] right-[20%] inline-flex items-center justify-center px-8 py-4 text-xs shadow-sm shadow-black  leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full font-semibold"></span>
 
             <h3 id="question" class="text-3xl font-semibold text-center">Loading... </h3>
             <div class="h-0.5 w-full bg-black "></div>
 
-            <div class=" text-center flex flex-col sm:flex-row  justify-center sm:space-x-14 m-8  ">
+            <div class=" text-center flex flex-col sm:flex-row  justify-center sm:space-x-14 sm:m-8  ">
                 <!-- component -->
 
-                <div class="option-div">
+                <div class="option-div ">
 
 
                 </div>
@@ -144,7 +176,7 @@
 
             </div>
 
-            <div class=" text-center flex flex-col sm:flex-row justify-center sm:space-x-14 m-8 ">
+            <div class=" text-center flex flex-col sm:flex-row justify-center sm:space-x-14 sm:m-8 ">
                 <div class="option-div">
                 </div>
 
@@ -154,7 +186,7 @@
 
 
 
-            <div class=" text-center flex flex-col sm:flex-row justify-start sm:justify-center sm:space-x-14 m-8">
+            <div class=" text-center flex flex-col sm:flex-row justify-start sm:justify-center sm:space-x-14 sm:m-8">
                 <div class="option-div">
                 </div>
 
@@ -176,6 +208,8 @@
 
 
 
+
+
     </div>
 
 
@@ -183,8 +217,8 @@
     <!-- Main Content  -->
 
 
-    <footer class="hidden w-full py-4 mt-14  text-center text-sm bottom-0 bg-black text-white">
-        Made With ❤️  By <a target="_blank" href="https://www.instagram.com/souravvmishra_/" >Sourav Mishra</a>
+    <footer class="hidden relative w-full py-4 mt-14  text-center text-sm bottom-0 bg-black text-white">
+        Made With ❤️ By <a target="_blank" href="https://www.instagram.com/souravvmishra_/">Sourav Mishra</a>
     </footer>
 
     <script src="script.js"></script>
