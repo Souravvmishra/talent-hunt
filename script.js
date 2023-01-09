@@ -121,6 +121,7 @@ $(".result").click(function (e) {
 for (let i = 0; i < tags.length; i++) {
     
     tags[i].addEventListener("click", ()=>{
+        tags[i].classList.add("active")
         url = `https://quizapi.io/api/v1/questions?apiKey=EDLK0p4OfvUmy3SNTAh0p7aO9j0AHnE64abFtJs2&limit=1&tags=${tags[i].innerText}`
         getQuiz()
     })
